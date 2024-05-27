@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de tareas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col py-4 px-4 gap-4">
+    <div class="bg-slate-400 py-4 px-4 rounded-md">
+        <h1 class="font-semibold text-center pb-4">Gestor de tareas de equipo de trabajo</h1>
+        <div class="flex flex-row border-2 rounded">
+            <button id="btn-add-miembro" class="py-2 px-2 hover:bg-slate-500 hover:text-slate-100">Añadir miembro</button>
+            <input id="input-nombre" class="flex-grow px-2" type="text" placeholder="Nombre">
+        </div>
+    </div>
+
+    <div class="bg-slate-400 py-4 px-4 rounded-md">
+        <h2 class="font-semibold text-center pb-4">Miembros</h2>
+        <div id="container-miembros" class="flex flex-row overflow-x-auto gap-3">
+            
+            
+        </div>
+    </div>
+    
+    <div id="section-tareas" class="flex flex-col bg-slate-400 py-4 px-4 rounded-md gap-4">
+        <div>
+            <h2 class="font-semibold text-center">Tareas</h2>
+            <h2 id="miembro-select-name" class="font-bold text-center text-slate-100 text-xl">Axel</h2>
+        </div>
+        <div class="flex flex-row border-2 rounded">
+            <button id="btn-add-tarea" class="py-2 px-2 hover:bg-slate-500 hover:text-slate-100">Añadir tarea</button>
+            <input id="input-descripcion" class="flex-grow px-2" type="text" placeholder="Descripción">
+        </div>
+        <div id="container-tareas" class="flex flex-col  gap-4">
+            
+
+        </div>
+    </div>
+
+    <template id="template-miembro">
+        <div class="card-miembro flex flex-col border-2 rounded hover:border-slate-700">
+            <button class="btn-nombre font-semibold text-lg text-center py-2 px-4 bg-slate-100">Axel</button>
+            <button class="btn-eliminar hover:bg-slate-500 hover:text-slate-100">Eliminar</button>
+        </div>
+    </template>
+
+    <template id="template-tarea">
+        <div class="card-tarea flex flex-col border-2 rounded hover:border-slate-700">
+            <p class="descripcion text-center bg-slate-100 px-2 py-2">Desarrollar una API REST</p>
+            <button class="btn-eliminar py-1 px-1 hover:bg-slate-500 hover:text-slate-100">Eliminar</button>
+        </div>
+    </template>
+
+    <script src="src/index.js"></script>
+</body>
+</html>

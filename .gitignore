@@ -1,0 +1,4 @@
+venv
+tailwind.config.js
+__pycache__
+db.db
